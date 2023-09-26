@@ -1,0 +1,49 @@
+\documentclass{article}
+
+\include{includes}
+
+% ================================================== %
+% ==================== A REMPLIR ====================%
+% ================================================== %
+\newcommand{\thetitle}{}
+\newcommand{\thesubtitle}{}
+\newcommand{\theauthor}{}
+% ================================================== %
+% ================================================== %
+% ================================================== %
+
+\begin{document}
+\pagenumbering{arabic}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\independant}{\perp\!\!\!\!\perp}
+\makeatletter
+\newcommand{\mybox}{%
+    \collectbox{%
+        \setlength{\fboxsep}{1pt}%
+        \fbox{\BOXCONTENT}%
+    }%
+}
+\makeatother
+
+\title{ \normalsize \textsc{}
+\\ [2.0cm]
+\HRule{1.5pt} \\
+\LARGE \textbf{\uppercase{\thetitle}
+\HRule{2.0pt} \\ [0.6cm] \LARGE{\thesubtitle} \vspace*{10\baselineskip}}
+}
+\date{}
+\author{\textbf{\theauthor}}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+\input{course.tex}
+
+\input{exercises.tex}
+
+\end{document}

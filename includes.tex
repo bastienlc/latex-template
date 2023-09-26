@@ -1,0 +1,119 @@
+\pagestyle{empty}
+
+\usepackage{float,graphicx,parskip,tabularx,url}
+\usepackage{biblatex}
+\bibliography{references}
+\usepackage[version=4]{mhchem}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{thmtools}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage[a4paper,top=25mm,bottom=25mm,inner=25mm,outer=25mm]{geometry}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{framed}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+\usepackage{exercise}
+\def\ExerciseName{Exercice}
+\usepackage{mdframed}
+
+\colorlet{LightGray}{White!90!Periwinkle}
+\colorlet{LightOrange}{Orange!7}
+\colorlet{LightGreen}{Green!7}
+\colorlet{LightBlue}{Blue!7}
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+
+\newmdenv[
+  leftmargin = 0.5em,
+  innerleftmargin = 0.5em,
+  innertopmargin = 0.5em,
+  innerbottommargin = 0.5em,
+  innerrightmargin = 0pt,
+  rightmargin = 0pt,
+  linewidth = 0.2pt,
+  topline = false,
+  rightline = false,
+  bottomline = true,
+  leftline = true,
+]{leftbottombarenv}
+
+\declaretheoremstyle[
+  postheadhook=\leavevmode\begin{leftbottombarenv},
+    prefoothook=\end{leftbottombarenv},
+]{leftbottombarsty}
+
+\newmdenv[
+  leftmargin = 0.5em,
+  innerleftmargin = 0.5em,
+  innertopmargin = 0.5em,
+  innerbottommargin = 0.5em,
+  innerrightmargin = 0pt,
+  rightmargin = 0pt,
+  linewidth = 0.2pt,
+  topline = false,
+  rightline = false,
+  bottomline = false,
+  leftline = true,
+]{leftbarenv}
+
+\declaretheoremstyle[
+  postheadhook=\leavevmode\begin{leftbarenv},
+    prefoothook=\end{leftbarenv},
+]{leftbarsty}
+
+\declaretheoremstyle[name=Théorème,]{thmsty}
+\declaretheorem[style=thmsty,numberwithin=section]{theorem}
+\tcolorboxenvironment{theorem}{colback=LightOrange}
+
+\declaretheoremstyle[name=Corollaire,]{corsty}
+\declaretheorem[style=corsty,numberwithin=section]{corollary}
+\tcolorboxenvironment{corollary}{colback=LightOrange}
+
+\declaretheoremstyle[name=Proposition,]{prosty}
+\declaretheorem[style=prosty,numberwithin=section]{proposition}
+\tcolorboxenvironment{proposition}{colback=LightBlue}
+
+\declaretheoremstyle[name=Définition,]{defsty}
+\declaretheorem[style=defsty,numberwithin=section]{definition}
+\tcolorboxenvironment{definition}{colback=LightGreen}
+
+\declaretheorem[style=leftbarsty,name=Exemple,numberwithin=section]{example}
+
+\declaretheorem[style=leftbottombarsty,name=Remarque,numberwithin=section]{remark}
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\leftmark}
+\fancyfoot[C]{\thepage}
+
+\fancypagestyle{plain}{
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+}
+
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage{enumitem}
+\setlist[itemize]{label={\textbullet}}
+
+\usepackage{bbold}
+\usepackage[bottom]{footmisc}
+\usepackage{collectbox}
+\usepackage{import}
+\newcommand{\incsvg}[2]{%
+  \def\svgwidth{\columnwidth}
+  \graphicspath{{#1}}
+  \input{#2.pdf_tex}
+}

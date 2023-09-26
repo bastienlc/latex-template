@@ -1,0 +1,6 @@
+main.*
+!main.tex
+!main.pdf
+includes.*
+!includes.tex
+indent.log
