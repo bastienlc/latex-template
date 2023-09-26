@@ -1,0 +1,67 @@
+{
+	"dollar math": {
+		"scope": "tex,latex",
+		"prefix": "mat",
+		"body": ["\\$$1\\$"],
+	},
+	"double dollar math": {
+		"scope": "tex,latex",
+		"prefix": "mmat",
+		"body": ["\\$$$1\\$$"],
+	},
+	"accolades": {
+		"scope": "tex,latex",
+		"prefix": "accolades",
+		"body": ["{$1}"],
+	},
+	"ensemble": {
+		"scope": "tex,latex",
+		"prefix": "ensemble",
+		"body": ["\\{$1\\\\}"],
+	},
+	"intervalle": {
+		"scope": "tex,latex",
+		"prefix": "intervalle",
+		"body": ["[$1]"],
+	},
+	"x1": {
+		"scope": "tex,latex",
+		"prefix": "x1",
+		"body": ["(x_1, \\dots, x_n)"],
+	},
+	"xi": {
+		"scope": "tex,latex",
+		"prefix": "xi",
+		"body": ["(X_i)_{1 \\leq i \\leq n}"],
+	},
+	"indicatrice": {
+		"scope": "tex,latex",
+		"prefix": "indicatrice",
+		"body": ["\\mathbb{1}_{\\{$1\\\\}}"],
+	},
+	"align": {
+		"scope": "tex,latex",
+		"prefix": "align",
+		"body": ["\\begin{align*}$1 & = \\\\\\& = \\\\\\ \\end{align*}"],
+	},
+	"theta": {
+		"scope": "tex,latex",
+		"prefix": "theta",
+		"body": ["$\\theta$"],
+	},
+	"question": {
+		"scope": "tex,latex",
+		"prefix": "question",
+		"body": ["\\textbf{Question $1}"],
+	},
+	"moyenne": {
+		"scope": "tex,latex",
+		"prefix": "moyenne",
+		"body": ["\\frac{1}{n}\\sum_{i=1}^{n}X_i"],
+	},
+	"norme": {
+		"scope": "tex,latex",
+		"prefix": "norme",
+		"body": ["||$1||"],
+	},
+}
