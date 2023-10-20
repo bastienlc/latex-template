@@ -21,10 +21,12 @@
 \def\ExerciseName{Exercice}
 \usepackage{mdframed}
 
-\colorlet{LightGray}{White!90!Periwinkle}
-\colorlet{LightOrange}{Orange!7}
-\colorlet{LightGreen}{Green!7}
-\colorlet{LightBlue}{Blue!7}
+\colorlet{LightGray}{Gray!8}
+\colorlet{LightOrange}{Orange!10}
+\colorlet{LightGreen}{Green!8}
+\colorlet{LightBlue}{Blue!8}
+\colorlet{LightRed}{Red!15}
+\colorlet{Yellow}{Yellow!15}
 
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
 
@@ -48,7 +50,7 @@
 ]{leftbottombarsty}
 
 \newmdenv[
-  leftmargin = 0.5em,
+  leftmargin = 0.9em,
   innerleftmargin = 0.5em,
   innertopmargin = 0.5em,
   innerbottommargin = 0.5em,
@@ -66,21 +68,29 @@
     prefoothook=\end{leftbarenv},
 ]{leftbarsty}
 
-\declaretheoremstyle[name=Théorème,]{thmsty}
+\declaretheoremstyle[name=Théorème]{thmsty}
 \declaretheorem[style=thmsty,numberwithin=section]{theorem}
-\tcolorboxenvironment{theorem}{colback=LightOrange}
+\tcolorboxenvironment{theorem}{colback=LightOrange, boxrule=1pt, arc=2pt}
 
 \declaretheoremstyle[name=Corollaire,]{corsty}
 \declaretheorem[style=corsty,numberwithin=section]{corollary}
-\tcolorboxenvironment{corollary}{colback=LightOrange}
+\tcolorboxenvironment{corollary}{colback=LightRed, boxrule=1pt, arc=2pt}
+
+\declaretheoremstyle[name=Lemme,]{lemsty}
+\declaretheorem[style=lemsty,numberwithin=section]{lemma}
+\tcolorboxenvironment{lemma}{colback=Yellow, boxrule=1pt, arc=2pt}
 
 \declaretheoremstyle[name=Proposition,]{prosty}
 \declaretheorem[style=prosty,numberwithin=section]{proposition}
-\tcolorboxenvironment{proposition}{colback=LightBlue}
+\tcolorboxenvironment{proposition}{colback=LightBlue, boxrule=1pt, arc=2pt}
+
+\declaretheoremstyle[name=Propriété,]{propristy}
+\declaretheorem[style=propristy,numberwithin=section]{propriety}
+\tcolorboxenvironment{propriety}{colback=LightGray, boxrule=1pt, arc=2pt}
 
 \declaretheoremstyle[name=Définition,]{defsty}
 \declaretheorem[style=defsty,numberwithin=section]{definition}
-\tcolorboxenvironment{definition}{colback=LightGreen}
+\tcolorboxenvironment{definition}{colback=LightGreen, boxrule=1pt, arc=2pt}
 
 \declaretheorem[style=leftbarsty,name=Exemple,numberwithin=section]{example}
 
@@ -115,3 +125,41 @@
   \graphicspath{{#2}}
   \input{#3.pdf_tex}
 }
+
+% Spaced arrays
+\renewcommand{\arraystretch}{1.5}
+
+% Circling text
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+    \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+\newcommand{\cplus}{\tikz[baseline=(char.base)]{
+    \node[shape=circle,draw,inner sep=1pt] (char) {+};}\space}
+\newcommand{\cminus}{\tikz[baseline=(char.base)]{
+    \node[shape=circle,draw,inner sep=3.2pt] (char) {-};}\space}
+
+% Nice commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\independant}{\perp\!\!\!\!\perp}
+\makeatletter
+\newcommand{\mybox}{%
+  \collectbox{%
+    \setlength{\fboxsep}{3pt}%
+    \fbox{\BOXCONTENT}%
+  }%
+}
+\makeatother
+
+% Sans-serifs maths
+\usepackage[cm]{sfmath}
+
+% Better paragraph and subparagraph formatting
+\usepackage[raggedright]{titlesec}
+\usepackage{blindtext}
+\usepackage{ulem}
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{0.5em}{}
+\titleformat{\subparagraph}[hang]{\normalfont\normalsize}{\theparagraph}{0.5em}{\uline}
