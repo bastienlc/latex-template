@@ -1,0 +1,21 @@
+\pagenumbering{arabic}
+\setlength{\headheight}{15pt}
+
+\title{
+    \HRule{1pt}
+    \LARGE \textbf{\thetitle}
+    \HRule{1pt}
+}
+\date{}
+\author{}
+\maketitle
+\tableofcontents
+\fancypagestyle{firstpage}
+{
+    \fancyhf{}
+    \fancyhead[R]{\GetTranslation{professor} \textbf{\theprofessor}.}
+    \fancyhead[L]{\textbf{\theauthor}}
+    \renewcommand{\headrulewidth}{0.5pt}
+}
+\thispagestyle{firstpage}
+\newpage

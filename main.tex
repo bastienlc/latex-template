@@ -1,40 +1,18 @@
 \documentclass[12pt]{article}
 
-\input{includes.tex}
-
-% ================================================== %
-% ==================== A REMPLIR ====================%
-% ================================================== %
-\newcommand{\thetitle}{Titre}
-\newcommand{\thesubtitle}{Sous-titre}
-\newcommand{\theauthor}{Auteur}
-\newcommand{\theprofessor}{Professeur}
-% ================================================== %
-% ================================================== %
-% ================================================== %
+\input{utils/translations.tex}
+\input{utils/includes.tex}
+\input{utils/styles.tex}
+\input{utils/theoremstyles.tex}
+\input{utils/commands.tex}
+\input{config.tex}
 
 \begin{document}
-\pagenumbering{arabic}
-\setlength{\headheight}{15pt}
-
-\title{ \normalsize \textsc{}
-\\ [2.0cm]
-\HRule{1.5pt} \\
-\LARGE \textbf{\uppercase{\thetitle}
-\HRule{2.0pt} \\ [0.6cm] \LARGE{\thesubtitle} \vspace*{10\baselineskip}}
-}
-\date{}
-\author{\textbf{\theauthor}\\\\D'après le cours de \textbf{\theprofessor}.}
-
-\maketitle
-\newpage
-
-\tableofcontents
-\newpage
-
+\input{utils/firstpage.tex}
+\part{\GetTranslation{course}}
 \input{course.tex}
 \newpage
-
+\part{\GetTranslation{exercises}}
+\pagestyle{plain}
 \input{exercises.tex}
-
 \end{document}

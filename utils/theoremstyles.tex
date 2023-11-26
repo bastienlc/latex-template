@@ -1,0 +1,46 @@
+\declaretheoremstyle[
+    postheadhook=\leavevmode\begin{leftbottombarenv},
+        prefoothook=\end{leftbottombarenv},
+]{leftbottombarsty}
+
+\declaretheoremstyle[
+    postheadhook=\leavevmode\begin{leftbarenv},
+        prefoothook=\end{leftbarenv},
+]{leftbarsty}
+
+\colorlet{LightGray}{Gray!8}
+\colorlet{LightOrange}{Orange!10}
+\colorlet{LightGreen}{Green!8}
+\colorlet{LightBlue}{Blue!8}
+\colorlet{LightRed}{Red!15}
+\colorlet{Yellow}{Yellow!15}
+
+\declaretheoremstyle[name=\protect\GetTranslation{theorem}]{thmsty}
+\declaretheorem[style=thmsty,numberwithin=section]{theorem}
+\tcolorboxenvironment{theorem}{colback=LightOrange, boxrule=1pt, arc=2pt}
+
+\declaretheoremstyle[name=\protect\GetTranslation{corollary},]{corsty}
+\declaretheorem[style=corsty,numberwithin=section]{corollary}
+\tcolorboxenvironment{corollary}{colback=LightRed, boxrule=1pt, arc=2pt}
+
+\declaretheoremstyle[name=\protect\GetTranslation{lemma},]{lemsty}
+\declaretheorem[style=lemsty,numberwithin=section]{lemma}
+\tcolorboxenvironment{lemma}{colback=Yellow, boxrule=1pt, arc=2pt}
+
+\declaretheoremstyle[name=\protect\GetTranslation{proposition},]{prosty}
+\declaretheorem[style=prosty,numberwithin=section]{proposition}
+\tcolorboxenvironment{proposition}{colback=LightBlue, boxrule=1pt, arc=2pt}
+
+\declaretheoremstyle[name=\protect\GetTranslation{propriety},]{propristy}
+\declaretheorem[style=propristy,numberwithin=section]{propriety}
+\tcolorboxenvironment{propriety}{colback=LightGray, boxrule=1pt, arc=2pt}
+
+\declaretheoremstyle[name=\protect\GetTranslation{definition},]{defsty}
+\declaretheorem[style=defsty,numberwithin=section]{definition}
+\tcolorboxenvironment{definition}{colback=LightGreen, boxrule=1pt, arc=2pt}
+
+\declaretheorem[style=leftbarsty,name=\protect\GetTranslation{example},numberwithin=section]{example}
+
+\declaretheorem[style=leftbottombarsty,name=\protect\GetTranslation{remark},numberwithin=section]{remark}
+
+\def\ExerciseName{\GetTranslation{exercise}}

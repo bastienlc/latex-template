@@ -1,6 +1,2 @@
-.temp/**
-main.*
-!main.tex
-includes.*
-!includes.tex
+.cache
 indent.log

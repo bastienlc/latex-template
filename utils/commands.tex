@@ -1,0 +1,35 @@
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+        \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+\newcommand{\cplus}{\tikz[baseline=(char.base)]{
+        \node[shape=circle,draw,inner sep=1pt] (char) {+};}\space}
+\newcommand{\cminus}{\tikz[baseline=(char.base)]{
+        \node[shape=circle,draw,inner sep=3.2pt] (char) {-};}\space}
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\independant}{\perp\!\!\!\!\perp}
+
+\newcommand{\mybox}{
+    \collectbox{
+        \setlength{\fboxsep}{3pt}
+        \fbox{\BOXCONTENT}
+    }
+}
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+\newcommand{\incsvg}[3][1.]{
+    \def\svgwidth{#1\columnwidth}
+    \graphicspath{{#2}}
+    \input{#3.pdf_tex}
+}
+
+\DeclareMathOperator\supp{supp}
+\DeclareMathOperator\id{Id}
+\DeclareMathOperator*{\argmin}{\arg\!\min}
+\DeclareMathOperator*{\argmax}{\arg\!\max}
+\DeclareMathOperator*{\Argmin}{\text{Argmin}}
+\DeclareMathOperator*{\Argmax}{\text{Argmax}}

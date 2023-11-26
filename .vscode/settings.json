@@ -1,0 +1,592 @@
+{
+    "ltex.language": "fr",
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "super-figure.vectorFigureEditor": "/usr/bin/inkscape",
+    "super-figure.bitmapFigureEditor": "/usr/bin/gimp",
+    "latex-workshop.latex.outDir": "%DIR%/.cache",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "copy output",
+            "command": "cp",
+            "args": [
+                "%OUTDIR%/%DOCFILE%.pdf",
+                "%DIR%/"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk",
+                "copy output"
+            ]
+        }
+    ],
+    "conceal.revealOn": "active-line",
+    "conceal.substitutions": [
+        {
+            "language": [
+                "latex",
+                {
+                    "pattern": "**/*.{tex}"
+                }
+            ],
+            "substitutions": [
+                {
+                    "ugly": "\\\\forall",
+                    "pretty": "∀"
+                },
+                {
+                    "ugly": "\\\\exists",
+                    "pretty": "∃"
+                },
+                {
+                    "ugly": "\\\\nexists",
+                    "pretty": "∄"
+                },
+                {
+                    "ugly": "\\\\nexi",
+                    "pretty": "∄"
+                },
+                {
+                    "ugly": "\\\\Rightarrow",
+                    "pretty": "⇒"
+                },
+                {
+                    "ugly": "\\\\leq",
+                    "pretty": "≤"
+                },
+                {
+                    "ugly": "\\\\geq",
+                    "pretty": "≥"
+                },
+                {
+                    "ugly": "\\\\in ",
+                    "pretty": "∈"
+                },
+                {
+                    "ugly": "\\\\subset",
+                    "pretty": "⊂"
+                },
+                {
+                    "ugly": "\\\\subseteq",
+                    "pretty": "⊆"
+                },
+                {
+                    "ugly": "\\\\supset",
+                    "pretty": "⊃"
+                },
+                {
+                    "ugly": "\\\\supseteq",
+                    "pretty": "⊇"
+                },
+                {
+                    "ugly": "\\\\cup",
+                    "pretty": "∪"
+                },
+                {
+                    "ugly": "\\\\cap ",
+                    "pretty": "∩"
+                },
+                {
+                    "ugly": "\\\\times",
+                    "pretty": "×"
+                },
+                {
+                    "ugly": "\\\\infty",
+                    "pretty": "∞"
+                },
+                {
+                    "ugly": "\\\\bot",
+                    "pretty": "⊥"
+                },
+                {
+                    "ugly": "\\\\top",
+                    "pretty": "⊤"
+                },
+                {
+                    "ugly": "\\\\land",
+                    "pretty": "∧"
+                },
+                {
+                    "ugly": "\\\\lor ",
+                    "pretty": "∨"
+                },
+                {
+                    "ugly": "\\\\leftarrow",
+                    "pretty": "←"
+                },
+                {
+                    "ugly": "\\\\longleftarrow",
+                    "pretty": "⟵"
+                },
+                {
+                    "ugly": "\\\\Leftarrow",
+                    "pretty": "⇐"
+                },
+                {
+                    "ugly": "\\\\Longleftarrow",
+                    "pretty": "⟸"
+                },
+                {
+                    "ugly": "\\\\rightarrow",
+                    "pretty": "→"
+                },
+                {
+                    "ugly": "\\\\longrightarrow",
+                    "pretty": "⟶"
+                },
+                {
+                    "ugly": "\\\\Rightarrow",
+                    "pretty": "⇒"
+                },
+                {
+                    "ugly": "\\\\Longrightarrow",
+                    "pretty": "⟹"
+                },
+                {
+                    "ugly": "\\\\iff",
+                    "pretty": "⇔"
+                },
+                {
+                    "ugly": "\\\\leftrightarrow",
+                    "pretty": "↔"
+                },
+                {
+                    "ugly": "\\\\uparrow",
+                    "pretty": "↑"
+                },
+                {
+                    "ugly": "\\\\downarrow",
+                    "pretty": "↓"
+                },
+                {
+                    "ugly": "\\\\Uparrow",
+                    "pretty": "⇑"
+                },
+                {
+                    "ugly": "\\\\Downarrow",
+                    "pretty": "⇓"
+                },
+                {
+                    "ugly": "\\\\alpha",
+                    "pretty": "α"
+                },
+                {
+                    "ugly": "\\\\beta",
+                    "pretty": "β"
+                },
+                {
+                    "ugly": "\\\\gamma",
+                    "pretty": "γ"
+                },
+                {
+                    "ugly": "\\\\delta",
+                    "pretty": "δ"
+                },
+                {
+                    "ugly": "\\\\Delta",
+                    "pretty": "Δ"
+                },
+                {
+                    "ugly": "\\\\eta",
+                    "pretty": "η"
+                },
+                {
+                    "ugly": "\\\\varepsilon",
+                    "pretty": "ε"
+                },
+                {
+                    "ugly": "\\\\rho",
+                    "pretty": "ρ"
+                },
+                {
+                    "ugly": "\\\\sigma",
+                    "pretty": "σ"
+                },
+                {
+                    "ugly": "\\\\Sigma",
+                    "pretty": "Σ"
+                },
+                {
+                    "ugly": "\\\\sum",
+                    "pretty": "Σ"
+                },
+                {
+                    "ugly": "\\\\theta",
+                    "pretty": "θ"
+                },
+                {
+                    "ugly": "\\\\Theta",
+                    "pretty": "Θ"
+                },
+                {
+                    "ugly": "\\\\phi",
+                    "pretty": "φ"
+                },
+                {
+                    "ugly": "\\\\varphi",
+                    "pretty": "ϕ"
+                },
+                {
+                    "ugly": "\\\\Phi",
+                    "pretty": "Φ"
+                },
+                {
+                    "ugly": "\\\\lambda",
+                    "pretty": "λ"
+                },
+                {
+                    "ugly": "\\\\mu",
+                    "pretty": "μ"
+                },
+                {
+                    "ugly": "\\\\psi",
+                    "pretty": "ψ"
+                },
+                {
+                    "ugly": "\\\\pi",
+                    "pretty": "π"
+                },
+                {
+                    "ugly": "\\\\Pi",
+                    "pretty": "Π"
+                },
+                {
+                    "ugly": "\\\\omega",
+                    "pretty": "ω"
+                },
+                {
+                    "ugly": "\\\\Omega",
+                    "pretty": "Ω"
+                },
+                {
+                    "ugly": "\\\\mathbb{A}",
+                    "pretty": "𝔸"
+                },
+                {
+                    "ugly": "\\\\mathbb{B}",
+                    "pretty": "𝔹"
+                },
+                {
+                    "ugly": "\\\\mathbb{C}",
+                    "pretty": "ℂ"
+                },
+                {
+                    "ugly": "\\\\mathbb{D}",
+                    "pretty": "ⅅ"
+                },
+                {
+                    "ugly": "\\\\mathbb{E}",
+                    "pretty": "𝔼"
+                },
+                {
+                    "ugly": "\\\\mathbb{F}",
+                    "pretty": "𝔽"
+                },
+                {
+                    "ugly": "\\\\mathbb{G}",
+                    "pretty": "𝔾"
+                },
+                {
+                    "ugly": "\\\\mathbb{H}",
+                    "pretty": "ℍ"
+                },
+                {
+                    "ugly": "\\\\mathbb{I}",
+                    "pretty": "𝕀"
+                },
+                {
+                    "ugly": "\\\\mathbb{J}",
+                    "pretty": "𝕁"
+                },
+                {
+                    "ugly": "\\\\mathbb{K}",
+                    "pretty": "𝕂"
+                },
+                {
+                    "ugly": "\\\\mathbb{L}",
+                    "pretty": "𝕃"
+                },
+                {
+                    "ugly": "\\\\mathbb{M}",
+                    "pretty": "𝕄"
+                },
+                {
+                    "ugly": "\\\\mathbb{N}",
+                    "pretty": "ℕ"
+                },
+                {
+                    "ugly": "\\\\mathbb{O}",
+                    "pretty": "𝕆"
+                },
+                {
+                    "ugly": "\\\\mathbb{P}",
+                    "pretty": "ℙ"
+                },
+                {
+                    "ugly": "\\\\mathbb{Q}",
+                    "pretty": "ℚ"
+                },
+                {
+                    "ugly": "\\\\mathbb{R}",
+                    "pretty": "ℝ"
+                },
+                {
+                    "ugly": "\\\\mathbb{S}",
+                    "pretty": "𝕊"
+                },
+                {
+                    "ugly": "\\\\mathbb{T}",
+                    "pretty": "𝕋"
+                },
+                {
+                    "ugly": "\\\\mathbb{U}",
+                    "pretty": "𝕌"
+                },
+                {
+                    "ugly": "\\\\mathbb{V}",
+                    "pretty": "𝕍"
+                },
+                {
+                    "ugly": "\\\\mathbb{W}",
+                    "pretty": "𝕎"
+                },
+                {
+                    "ugly": "\\\\mathbb{X}",
+                    "pretty": "𝕏"
+                },
+                {
+                    "ugly": "\\\\mathbb{Y}",
+                    "pretty": "𝕐"
+                },
+                {
+                    "ugly": "\\\\mathbb{Z}",
+                    "pretty": "ℤ"
+                },
+                {
+                    "ugly": "\\\\mathcal{A}",
+                    "pretty": "𝓐"
+                },
+                {
+                    "ugly": "\\\\mathcal{B}",
+                    "pretty": "𝓑"
+                },
+                {
+                    "ugly": "\\\\mathcal{C}",
+                    "pretty": "𝓒"
+                },
+                {
+                    "ugly": "\\\\mathcal{D}",
+                    "pretty": "𝓓"
+                },
+                {
+                    "ugly": "\\\\mathcal{E}",
+                    "pretty": "𝓔"
+                },
+                {
+                    "ugly": "\\\\mathcal{F}",
+                    "pretty": "𝓕"
+                },
+                {
+                    "ugly": "\\\\mathcal{G}",
+                    "pretty": "𝓖"
+                },
+                {
+                    "ugly": "\\\\mathcal{H}",
+                    "pretty": "𝓗"
+                },
+                {
+                    "ugly": "\\\\mathcal{I}",
+                    "pretty": "𝓘"
+                },
+                {
+                    "ugly": "\\\\mathcal{J}",
+                    "pretty": "𝓙"
+                },
+                {
+                    "ugly": "\\\\mathcal{K}",
+                    "pretty": "𝓚"
+                },
+                {
+                    "ugly": "\\\\mathcal{L}",
+                    "pretty": "𝓛"
+                },
+                {
+                    "ugly": "\\\\mathcal{M}",
+                    "pretty": "𝓜"
+                },
+                {
+                    "ugly": "\\\\mathcal{N}",
+                    "pretty": "𝓝"
+                },
+                {
+                    "ugly": "\\\\mathcal{O}",
+                    "pretty": "𝓞"
+                },
+                {
+                    "ugly": "\\\\mathcal{P}",
+                    "pretty": "𝓟"
+                },
+                {
+                    "ugly": "\\\\mathcal{Q}",
+                    "pretty": "𝓠"
+                },
+                {
+                    "ugly": "\\\\mathcal{R}",
+                    "pretty": "𝓡"
+                },
+                {
+                    "ugly": "\\\\mathcal{S}",
+                    "pretty": "𝓢"
+                },
+                {
+                    "ugly": "\\\\mathcal{T}",
+                    "pretty": "𝓣"
+                },
+                {
+                    "ugly": "\\\\mathcal{U}",
+                    "pretty": "𝓤"
+                },
+                {
+                    "ugly": "\\\\mathcal{V}",
+                    "pretty": "𝓥"
+                },
+                {
+                    "ugly": "\\\\mathcal{W}",
+                    "pretty": "𝓦"
+                },
+                {
+                    "ugly": "\\\\mathcal{X}",
+                    "pretty": "𝓧"
+                },
+                {
+                    "ugly": "\\\\mathcal{Y}",
+                    "pretty": "𝓨"
+                },
+                {
+                    "ugly": "\\\\mathcal{Z}",
+                    "pretty": "𝓩"
+                },
+                {
+                    "ugly": "\\\\dots",
+                    "pretty": "…"
+                },
+                {
+                    "ugly": "\\\\left",
+                    "pretty": "‎ "
+                },
+                {
+                    "ugly": "\\\\right",
+                    "pretty": "‎"
+                },
+                {
+                    "ugly": "\\$",
+                    "pretty": "‎"
+                },
+                {
+                    "ugly": "\\\\begin",
+                    "pretty": "‎"
+                },
+                {
+                    "ugly": "\\\\end",
+                    "pretty": "‎"
+                },
+                {
+                    "ugly": "\\\\text",
+                    "pretty": "‎"
+                },
+                {
+                    "ugly": "\\^2",
+                    "pretty": "²"
+                },
+                {
+                    "ugly": "\\^3",
+                    "pretty": "³"
+                },
+                {
+                    "ugly": "\\^4",
+                    "pretty": "⁴"
+                },
+                {
+                    "ugly": "\\^5",
+                    "pretty": "⁵"
+                },
+                {
+                    "ugly": "\\^6",
+                    "pretty": "⁶"
+                },
+                {
+                    "ugly": "\\^7",
+                    "pretty": "⁷"
+                },
+                {
+                    "ugly": "\\^8",
+                    "pretty": "⁸"
+                },
+                {
+                    "ugly": "\\^9",
+                    "pretty": "⁹"
+                },
+                {
+                    "ugly": "\\\\partial",
+                    "pretty": "∂"
+                },
+                {
+                    "ugly": "\\\\nabla",
+                    "pretty": "∇"
+                },
+                {
+                    "ugly": "\\\\Gamma",
+                    "pretty": "Γ"
+                },
+                {
+                    "ugly": "\\\\Leftrightarrow",
+                    "pretty": "⇔"
+                },
+                {
+                    "ugly": "\\\\langle",
+                    "pretty": "<"
+                },
+                {
+                    "ugly": "\\\\rangle",
+                    "pretty": ">"
+                },
+                {
+                    "ugly": "\\\\tau",
+                    "pretty": "τ"
+                },
+                {
+                    "ugly": "\\\\sim",
+                    "pretty": "∼"
+                },
+                {
+                    "ugly": "\\\\xi",
+                    "pretty": "ξ"
+                },
+                {
+                    "ugly": "\\\\llbracket",
+                    "pretty": "[["
+                },
+                {
+                    "ugly": "\\\\rrbracket",
+                    "pretty": "]]"
+                }
+            ]
+        }
+    ],
+}
